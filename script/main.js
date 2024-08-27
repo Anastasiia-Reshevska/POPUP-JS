@@ -9,19 +9,21 @@
             if (!isOpenPopup) {
                 popover.classList.add('popover-open');
                 let title = document.createElement('div');
-                let newDiv = document.createElement('div');
-                newDiv.className = 'dropdown-content';
-                newDiv.innerHTML = 'Some content inside the popover';
-                title.className = 'dropdown-title';
-                title.innerHTML = 'Popover Header';
-                popover.prepend(newDiv);
-                popover.prepend(title);
+                let text = document.createElement('div');
+                let container = document.createElement('div');
                 const content = this.getAttribute('data-content');
+                const header = this.getAttribute('data-title');
+                container.className = 'wrapper';
+                text.className = 'popover-content';
+                text.innerHTML = content;
+                title.className = 'popover-title';
+                title.innerHTML = header;
+                popover.prepend(container);
+                container.prepend(text);
+                container.prepend(title);
             } else {
-                const newDiv = popover.querySelector('.dropdown-content');
-                const title = popover.querySelector('.dropdown-title');
-                newDiv.remove();
-                title.remove();
+                const container = popover.querySelector('.wrapper');
+                container.remove();
                 popover.classList.remove('popover-open');
             }
         })

@@ -1,115 +1,5 @@
-/* .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
-
-.wrapper button {
-    margin: 50px;
-}
-
-a {
-    text-decoration: none;
-    color: aliceblue;
-}
-
 button {
-    border: 1px solid #258BFF ;
-    background-color: #258BFF;
-    height: 50px;
-    width: 200px;
-    color: aliceblue;
-    border-radius: 10px;
-}
-.popup_form button:hover {
-    background: #FFFFFF;
-    color: #258BFF;
-    transition: 0.5s all;
-}
-
-
-.btn {
-    margin: 0 auto;
-    margin-top: 20px;
-    display: block;
-    height: 40px;
-}
-
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgb(0, 0, 0, 0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s all;
-}
-
-.popup.active {
-    opacity: 1;
-    pointer-events: all;
-    transition: 0.2s all;
-}
-
-.popup_form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background: #FFFFFF;
-    width: 400px;
-    padding: 25px;
-    border-radius: 10px;
-    color: #3f3f3f;
-    transition: 0.5s all;
-}
-
-.popup_form.active {
-   transform: translate(-50%, -50%) scale(1);  
-   transition: 0.5s all;
-}
-
-.close-popup {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-.popup_form label {
-    width: 100%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.form-label {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.form-control {
-    width: 400px;
-    height: 30px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #cfd0d3;
-}
-
-.popup_form textarea {
-    resize: none;
-    width: 100%;
-    height: 100px;
-} */
-
-
-button {
+    position: relative;
     border: 1px solid #258BFF ;
     background-color: #258BFF;
     height: 50px;
@@ -118,6 +8,7 @@ button {
     border-radius: 10px;
     margin: 50px;
 }
+
 button:hover {
     background: #FFFFFF;
     color: #258BFF;
@@ -131,7 +22,38 @@ button:hover {
     height: 40px;
 }
 
-.window {
- display: flex;
- justify-content: center;
+.wrapper {
+    width: 150px;
+    color: #191919 ;
+    position: absolute;
+    margin-top: 40px;
+    border: 1px solid #808080; 
+    border-radius: 10px;
+    line-height: 30px;
+    background-color:#bdc3c799; 
+}
+
+.wrapper::before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    border: 1px solid #808080;
+    background-color: #808080;
+    transform: rotate(45deg) translateX(-50%);
+}
+
+.popover-title{
+    border-bottom: 1px solid #808080;
+    font-weight: 700;
+    padding: 8px;
+    background-color: #808080;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.popover-content{
+    padding: 10px;
 }
