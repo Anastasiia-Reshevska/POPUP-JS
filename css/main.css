@@ -1,4 +1,4 @@
-.wrapper {
+/* .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,4 +106,32 @@ button {
     resize: none;
     width: 100%;
     height: 100px;
+} */
+
+
+button {
+    border: 1px solid #258BFF ;
+    background-color: #258BFF;
+    height: 50px;
+    width: 200px;
+    color: aliceblue;
+    border-radius: 10px;
+    margin: 50px;
+}
+button:hover {
+    background: #FFFFFF;
+    color: #258BFF;
+    transition: 0.5s all;
+}
+
+.btn {
+    margin: 0 auto;
+    margin-top: 200px;
+    display: block;
+    height: 40px;
+}
+
+.window {
+ display: flex;
+ justify-content: center;
 }
