@@ -22,34 +22,40 @@ button:hover {
     height: 40px;
 }
 
-.wrapper {
+.popover-wrapper {
     width: 150px;
     color: #191919 ;
     position: absolute;
-    margin-top: 40px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    margin-top: 19px;
     border: 1px solid #808080; 
     border-radius: 10px;
     line-height: 30px;
-    background-color:#bdc3c799; 
+    background-color:#FFFFFF; 
 }
 
-.wrapper::before {
+.popover-wrapper .popover-content:nth-child(3n){
+    border-top: 1px solid #808080;
+}
+
+.popover-arrow {
     content: '';
     height: 10px;
     width: 10px;
     position: absolute;
-    top: -3px;
+    top: -2px;
     left: 50%;
-    border: 1px solid #808080;
-    background-color: #808080;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    background-color: #FFFFFF;
     transform: rotate(45deg) translateX(-50%);
 }
 
 .popover-title{
-    border-bottom: 1px solid #808080;
     font-weight: 700;
     padding: 8px;
-    background-color: #808080;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -57,3 +63,6 @@ button:hover {
 .popover-content{
     padding: 10px;
 }
+
+
+
